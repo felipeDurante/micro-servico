@@ -1,0 +1,19 @@
+version: '3.4'
+services:
+  docker-config-server:
+    image: docker-config-server
+    restart: always
+    build:
+      context: .
+      dockerfile: app-server-docker/Dockerfile
+    working_dir: /app-server-docker
+    environment:
+      TZ: America/Sao_Paulo    
+    ports:
+      - "8080:8080"
+    command: mvn spring-boot:run
+    networks:
+      - docker-network  
+networks:
+    docker-network:
+        driver: bridge

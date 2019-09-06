@@ -1,0 +1,12 @@
+
+spring:
+  application:
+    name: greeting-service
+  cloud:
+    config:
+        uri: http://localhost:9090
+##      profiles:
+##        uri: http://35.198.23.45/
+##      profile:
+##  profiles:
+##    active:
