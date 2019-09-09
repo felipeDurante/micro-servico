@@ -5,8 +5,8 @@ services:
     restart: always
     build:
       context: .
-      dockerfile: app-server-docker/Dockerfile
-    working_dir: /app-server-docker
+      dockerfile: app-server-config/Dockerfile
+    working_dir: /app-server-config
     environment:
       TZ: America/Sao_Paulo    
     ports:
